@@ -1,5 +1,5 @@
 #iOS_App2
 
-Made the interface. Wrote the if statement to check if the random number implementation works.
+Removed the clear button. Made the button click update the label at the bottom of the screen. Included error trapping for all scenarios, including the one where no data is entered.
 
-Version: 0.01
+Version: 0.2

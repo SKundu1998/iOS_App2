@@ -13,12 +13,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var textGuess: UITextField!
     @IBOutlet weak var labelResult: UILabel!
     @IBAction func buttonGuessTapped(_ sender: Any) {
+        if textGuess.text == nil {
+            labelResult.text = "Enter something."
+            return
+        }
+        let intFingersGuess = Int(textGuess.text!)!
+        if (Double(textGuess.text!)! != Double(intFingersGuess)) {
+            labelResult.text = "That's really not possible"
+            return
+        }
+        if (intFingersGuess < 0 || intFingersGuess > 10) {
+            labelResult.text = "That's really not possible."
+            return
+        }
         let intFingersActual = Int(arc4random_uniform(11))
         if Int(textGuess.text!)! == intFingersActual {
-            print("Yes")
+            labelResult.text = "Dammit, you got it."
         }
         else {
-            print("No")
+            labelResult.text = "Sucker!"
         }
     }
     
