@@ -2,4 +2,4 @@
 
 Final version, changed the version number in app info.
 
-Version: 0.2
+Version: 1.0
